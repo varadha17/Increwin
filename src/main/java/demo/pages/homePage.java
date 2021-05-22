@@ -53,9 +53,9 @@ public class homePage {
 		float ff= Float.parseFloat(s);
 		
 		for(WebElement li1:li) {
-			String s1 = li1.getText().replace("$", "");
+			String s1 = li1.getText().replace("$", "_");
 			float ff1 = Float.parseFloat(s1);
-			if(ff1>ff) {
+			if(ff1<ff) {
 				ff = ff1;
 			}
 		}
