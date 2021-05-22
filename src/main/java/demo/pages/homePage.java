@@ -48,7 +48,6 @@ public class homePage {
 	public void selectHighestPrice() throws InterruptedException {
 		Thread.sleep(4000);
 		List<WebElement> li = driver.findElements(price);
-		
 		String s = li.get(0).getText().replace("$", "");
 		float ff= Float.parseFloat(s);
 		
