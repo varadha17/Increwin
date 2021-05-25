@@ -12,6 +12,7 @@ public class loginPage {
 	private By username = By.id("user-name");
 	private By passwordField = By.id("password");
 	private By button = By.id("login-button");
+
 	
 	public loginPage(WebDriver driver) {
 		this.driver = driver;
