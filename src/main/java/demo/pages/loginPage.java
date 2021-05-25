@@ -11,7 +11,7 @@ public class loginPage {
 	//Locators
 	private By username = By.id("user-name");
 	private By pass = By.id("password");
-	private By button = By.id("login-button");
+	private By buttonClick = By.id("login-button");
 	
 	public loginPage(WebDriver driver) {
 		this.driver = driver;
@@ -21,8 +21,8 @@ public class loginPage {
 		common.ExpWait(driver, 10, driver.findElement(username));
 		driver.findElement(username).sendKeys(user);
 		driver.findElement(pass).sendKeys(password);
-		driver.findElement(button).click();
-		
+		driver.findElement(buttonClick).click();
+		System.out.println("landed in Product page");
 		return new homePage(driver);
 	}
 
