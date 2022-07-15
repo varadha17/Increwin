@@ -52,6 +52,7 @@ public class homePage {
 		for(WebElement li1:li) {
 			String s1 = li1.getText().replace("$", "");
 			float ff1 = Float.parseFloat(s1);
+			System.out.println("List of Prices-->");
 			System.out.println(ff1);
 			if(ff1>ff) {
 				ff = ff1;
