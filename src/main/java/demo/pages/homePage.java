@@ -52,10 +52,13 @@ public class homePage {
 		for(WebElement li1:li) {
 			String s1 = li1.getText().replace("$", "");
 			float ff1 = Float.parseFloat(s1);
-			if(ff1<ff) {
+			System.out.println(ff1);
+			if(ff1>ff) {
 				ff = ff1;
 			}
 		}
+		
+			System.out.println("Highest price:: "+ff);
 			driver.findElement(By.xpath("//div[@class='pricebar']/div[text()='"+ ff +"']/parent::div/button")).click();
 			Thread.sleep(6000);
 		}
