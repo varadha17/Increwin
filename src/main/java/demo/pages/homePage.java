@@ -46,8 +46,8 @@ public class homePage {
 	public void selectHighestPrice() throws InterruptedException {
 		Thread.sleep(4000);
 		List<WebElement> li = driver.findElements(price);
-		String s = li.get(0).getText().replace("$", "");
-		float ff= Float.parseFloat(s);
+		String value = li.get(0).getText().replace("$", "");
+		float ff= Float.parseFloat(value);
 		
 		for(WebElement li1:li) {
 			String s1 = li1.getText().replace("$", "");
@@ -73,7 +73,7 @@ public class homePage {
 	}
 	
 	public void details() {
-		common.ExpWait(driver, 10, driver.findElement(Firstname));
+		common.ExpWait(driver, 15, driver.findElement(Firstname));
 		driver.findElement(Firstname).sendKeys("Varadharajan");
 		driver.findElement(lastName).sendKeys("Thiru");
 		driver.findElement(zipCode).sendKeys("600049");
