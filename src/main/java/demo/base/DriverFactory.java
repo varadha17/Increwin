@@ -21,7 +21,7 @@ public class DriverFactory {
 		getDriver().manage().window().maximize();
 		getDriver().get("https://www.saucedemo.com/");
 		getDriver().manage().deleteAllCookies();
-		
+		System.out.println("pass correct browser:: "+browser);
 		return getDriver();
 	}
 	
