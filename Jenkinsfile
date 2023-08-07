@@ -8,8 +8,8 @@ pipeline {
     stages {
     	stage('Build Jar') {
             steps {
-                //sh
-                bat "mvn clean package -DskipTests"
+                //bat
+                sh "mvn clean package -DskipTests"
             }
         }
         stage('RunTest') {
