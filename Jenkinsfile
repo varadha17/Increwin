@@ -3,7 +3,7 @@ pipeline {
     agent any
     tools { 
       maven 'MAVEN_HOME' 
-      jdk 'JAVA_HOME' 
+      jdk 'Java_Home' 
     }
     stages {
         stage('RunTest') {
