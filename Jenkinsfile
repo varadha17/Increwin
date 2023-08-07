@@ -6,7 +6,7 @@ pipeline {
       jdk 'Java_Home' 
     }
     stages {
-    	stage('Build Jar') {
+    	stage('Package Jar') {
             steps {
                 //bat
                 sh "mvn clean package -DskipTests"
