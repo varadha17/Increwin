@@ -27,7 +27,6 @@ public class loginPage {
 		driver.findElement(pass).sendKeys(password);
 		driver.findElement(buttonClick).click();
 		System.out.println("landed in Product page");
-
 		return new homePage(driver);
 	}
 

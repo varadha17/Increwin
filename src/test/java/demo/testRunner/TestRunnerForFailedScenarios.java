@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "@target/rerun.txt", 
+		features = "@output/rerun.txt", 
 		glue= {"stepDef","AppHooks"}
 		)
 

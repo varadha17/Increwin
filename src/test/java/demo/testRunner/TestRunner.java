@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 		tags="@product or @login",
 		monochrome=true,
 		dryRun = false,
-		plugin= {"rerun:target/rerun.txt"}
+		plugin= {"rerun:output/rerun.txt"}
 		
 		)
 
