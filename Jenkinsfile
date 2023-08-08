@@ -17,10 +17,8 @@ pipeline {
         }
         stage('RunTest') {
             steps {
-            	script{
-            	   //bat
-                	sh "mvn test -Dtest=Choice: ${params.CHOICE}" 
-            	}               
+            	 //bat
+                sh "mvn test -Dtest=Choice: ${params.CHOICE}"              
             }
         }
     }
