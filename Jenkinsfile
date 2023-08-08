@@ -23,8 +23,8 @@ pipeline {
             }
         }
     }
-    
-    def runner() {
-    	return "Choice: ${params.CHOICE}"
-    }
+}
+
+def runner() {
+    return "Choice: ${params.CHOICE}"
 }
