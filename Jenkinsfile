@@ -17,9 +17,11 @@ pipeline {
         }
         stage('RunTest') {
             steps {
-                //bat
-                output = runner()
-                sh "mvn test -Dtest= ${output}"
+            	script{
+            	   //bat
+                	output = runner()
+                	sh "mvn test -Dtest= ${output}" 
+            	}               
             }
         }
     }
