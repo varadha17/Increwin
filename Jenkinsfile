@@ -18,8 +18,13 @@ pipeline {
         stage('RunTest') {
             steps {
                 //bat
-                sh "mvn test -Dtest=Choice: ${params.CHOICE}"
+                output = runner()
+                sh "mvn test -Dtest= ${output}"
             }
         }
+    }
+    
+    def runner() {
+    	return "Choice: ${params.CHOICE}"
     }
 }
