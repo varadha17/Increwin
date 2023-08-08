@@ -18,7 +18,7 @@ pipeline {
         stage('RunTest') {
             steps {
             	 //bat
-                sh "mvn test -Dtest= ${params.Runner}"              
+                sh "mvn test -Dtest=${params.Runner}"              
             }
         }
     }
