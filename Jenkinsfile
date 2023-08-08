@@ -5,9 +5,9 @@ pipeline {
       maven 'MAVEN_HOME' 
       jdk 'Java_Home' 
     }
-    parameters{
-        choice(name: 'Runner', choices: ['TestRunner', 'TestRunnerForFailedScenarios'], description: 'Pick something')
-    }
+    parameters {
+  		choice choices: ['TestRunner', 'TestRunnerForFailedScenarios'], name: 'Runner'
+	}
     stages {
     	stage('Package Jar') {
             steps {
