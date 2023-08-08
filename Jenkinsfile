@@ -19,14 +19,10 @@ pipeline {
             steps {
             	script{
             	   //bat
-                	output = runner()
-                	sh "mvn test -Dtest= ${output}" 
+                	sh "mvn test -Dtest=Choice: ${params.CHOICE}" 
             	}               
             }
         }
     }
 }
 
-def runner() {
-    return "Choice: ${params.CHOICE}"
-}
