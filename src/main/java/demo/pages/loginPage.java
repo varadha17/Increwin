@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 import demo.utils.common;
 
+import static org.junit.Assert.*;
+
 public class loginPage {
 	
 	private WebDriver driver;
@@ -17,12 +19,18 @@ public class loginPage {
 		this.driver = driver;
 	}
 	
+	public void getTitleOfPage() {
+		String title = driver.getTitle();
+		assertEquals(title,"some");
+	}
+	
 	public homePage setCredentials(String user, String password) {
 		common.ExpWait(driver, 10, driver.findElement(username));
 		driver.findElement(username).sendKeys(user);
 		driver.findElement(pass).sendKeys(password);
 		driver.findElement(buttonClick).click();
 		System.out.println("landed in Product page");
+
 		return new homePage(driver);
 	}
 

@@ -10,10 +10,10 @@ import io.cucumber.junit.CucumberOptions;
 		
 		features="src/main/java/featureFile",
 		glue= {"stepDef","AppHooks"},
-		tags="@product",
+		tags="@product or @login",
 		monochrome=true,
 		dryRun = false,
-		plugin= {"html:target/cucumber.html"}
+		plugin= {"rerun:target/rerun.txt"}
 		
 		)
 

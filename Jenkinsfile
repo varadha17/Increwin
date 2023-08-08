@@ -5,6 +5,9 @@ pipeline {
       maven 'MAVEN_HOME' 
       jdk 'Java_Home' 
     }
+    parameters{
+        choice(name: 'Runner', choices: ['TestRunner', 'TestRunnerForFailedScenarios'], description: 'Pick something')
+    }
     stages {
     	stage('Package Jar') {
             steps {
@@ -15,7 +18,7 @@ pipeline {
         stage('RunTest') {
             steps {
                 //bat
-                sh "mvn test -Dcucumber.filter.tags=@product"
+                sh "mvn test -Dtest=Choice: ${params.CHOICE}"
             }
         }
     }

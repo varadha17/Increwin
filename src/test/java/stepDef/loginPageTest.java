@@ -11,6 +11,7 @@ public class loginPageTest {
 
 	@Given("enter username {string} and password {string}")
 	public void enter_username_and_password(String string, String string2) {
+		login.getTitleOfPage();
 	    login.setCredentials(string, string2);
 	}
 
