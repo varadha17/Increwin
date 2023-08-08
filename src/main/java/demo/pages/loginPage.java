@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 import demo.utils.common;
 
-import static org.junit.Assert.*;
-
 public class loginPage {
 	
 	private WebDriver driver;
@@ -20,8 +18,7 @@ public class loginPage {
 	}
 	
 	public void getTitleOfPage() {
-		String title = driver.getTitle();
-		assertEquals(title,"some");
+		driver.findElement(By.xpath("//a/d")).click();
 	}
 	
 	public homePage setCredentials(String user, String password) {
